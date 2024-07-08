@@ -1,0 +1,116 @@
+@import "vars";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: $link;
+    &:hover {
+        color: #6e87b6;
+    }
+}
+ul, ol {
+    list-style: none;
+}
+html {
+    font-size: 16px;
+    font-family: "Golos Text", "Montserrat", sans-serif;
+    font-weight: 400;
+    color: $main;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 60px;
+    font-weight: 400;
+    @media (max-width: 992px) {
+        font-size: 48px;
+    }
+    @media (max-width: 767px) {
+        font-size: 36px;
+    }
+}
+h2 {
+    font-size: 36px;
+    font-weight: 400;
+    @media (max-width: 767px) {
+        font-size: 28px;
+    }
+}
+.text-red {
+    color: $selected;
+    font-weight: bold;
+}
+.container {
+    width: 1222px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 1262px) {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+.wrapper {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 40px;
+    background-color: transparent;
+    border: 2px solid $primary;
+    border-radius: 66px;
+    text-align: center;
+    color: $primary;
+    line-height: 130%;
+    font-weight: 500;
+    transition: .2s;
+    @media (max-width: 767px) {
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+    &-primary {
+        background-color: $primary;
+        color: #ffffff;
+        &:hover {
+            background-color: $primary-hover;
+            border-color: $primary-hover;
+            color: $primary;
+        }
+    }
+    &-outline-primary {
+        @media (max-width: 767px) {
+            background-color: rgba(255,255,255,.9);
+            border-color: rgba(255,255,255,.8);
+        }
+        &:hover {
+            background-color: $primary;
+            border-color: $primary;
+            color: #ffffff;
+        }
+    }
+    &-sm {
+        display: inline-block;
+        padding: 12px;
+        border-radius: 62px;
+        background-color: transparent;
+        border: 1px solid $link;
+        color: $link;
+        font-weight: 500;
+        transition: .2s;
+        line-height: 9px;
+        &:hover {
+            background-color: $link;
+            color: #ffffff;
+        }
+    }
+}
